@@ -71,13 +71,13 @@ export default function Form(props) {
           }}
         ></textarea>
 </div>
-          <button type="button"  className="btn btn-primary me-2" onClick={onClickUpper}>
+          <button type="button" disabled={text.length==0} className="btn btn-primary me-2" onClick={onClickUpper}>
             Uppercase
           </button>
-          <button type="button" className="btn btn-primary me-2" onClick={onClickLower}>
+          <button type="button"disabled={text.length==0}  className="btn btn-primary me-2" onClick={onClickLower}>
             Lowercase
           </button>
-          <button type="button" className="btn btn-primary me-2" onClick={onClickClear}>
+          <button type="button" disabled={text.length==0} className="btn btn-primary me-2" onClick={onClickClear}>
             Clear
           </button>
           <button
@@ -87,12 +87,12 @@ export default function Form(props) {
           >
             Remove Numbers
           </button>
-          <button type="button" className="btn btn-primary" onClick={onClickCopyText}>
+          <button type="button"disabled={text.length==0}  className="btn btn-primary" onClick={onClickCopyText}>
             Copy Text
           </button>
         </div>
 
-      <div className="mt-4" style={{
+      <div className="mt-4" disabled={text.length==0} style={{
             color: props.mode === "dark" ? "white" : "black",
           }}>
         <h2>Text Summary</h2>
